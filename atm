@@ -1,0 +1,33 @@
+print("Welcome to ATM")
+pin = int(input("Enter the pin number: "))
+acc_bal = 1000
+if pin>1 and pin<10:
+    print("User exist")
+    while True:
+        print("1.Depost\n2.Withdrawl\n3.Balance\n4.End")
+        choice = int(input("Enter your choice"))
+        if (choice == 1):
+            deposit_amt = int(input("Enter deposit amount: "))
+            acc_bal += deposit_amt
+            print("deposit succesfull")
+            print("your amount is",acc_bal)
+        elif (choice == 2):
+            deposit_amt = int(input("Enter Withdrawl amount: "))
+            if deposit_amt>acc_bal:
+                print("insufficient balance")
+            else:
+                acc_bal -= deposit_amt 
+                print("withdraw succesfull")
+                print("your amount is: ",acc_bal)  
+        elif (choice ==3):
+            print("your balance amount is: ",acc_bal)
+        elif(choice==4):
+            print("end")
+            break
+        else:
+            next = input("Enter yes or no: ")
+            if (next =="yes"):
+                print("Thank")
+                break
+else:
+    print("Invalid")
